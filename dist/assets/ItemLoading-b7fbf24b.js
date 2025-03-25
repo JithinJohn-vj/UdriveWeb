@@ -1,0 +1,1 @@
+import{j as r,l as e}from"./index-e2557835.js";import{T as s,a}from"./TableRow-cd1bf836.js";import{C as n}from"./CircularProgress-63df29d4.js";function l(){return r.jsx(s,{children:r.jsx(a,{align:"center",colSpan:12,sx:{py:3},children:r.jsx(e,{sx:{textAlign:"center"},children:r.jsx(n,{})})})})}export{l as I};

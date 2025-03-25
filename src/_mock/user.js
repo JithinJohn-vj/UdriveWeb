@@ -1,0 +1,97 @@
+import { sample } from 'lodash';
+import { faker } from '@faker-js/faker';
+
+// ----------------------------------------------------------------------
+
+export const users = [...Array(24)].map((_, index) => ({
+  id: faker.string.uuid(),
+  avatarUrl: `/assets/images/avatars/avatar_${index + 1}.jpg`,
+  name: faker.person.fullName(),
+  company: sample([
+    'john.doe@example.com',
+    'sarah.smith@example.com',
+    'michael.jones@example.com',
+    'emily.wilson@example.com',
+    'david.brown@example.com',
+    'lisa.johnson@example.com',
+    'robert.anderson@example.com',
+    'jessica.taylor@example.com',
+    'william.moore@example.com',
+    'laura.miller@example.com',
+  ]),
+  isVerified: faker.datatype.boolean(),
+  status: sample(['active', 'blocked']),
+  role: sample(['admin']),
+  acess: sample([
+    'Fleet | Customer | Booking | Reminder',
+    'Customer | Reminder',
+    'Booking | Customer',
+    'Reminder | Fleet | Customer',
+  ]),
+}));
+
+export const cars = [...Array(24)].map((_, index) => ({
+  id: faker.string.uuid(),
+  avatarUrl: `/assets/images/avatars/avatar_${index + 1}.jpg`,
+  name: faker.vehicle.vehicle(),
+  company: faker.vehicle.manufacturer(),
+  fuel: faker.vehicle.fuel(),
+  date: faker.date.anytime(),
+  fromDate: faker.date.anytime(),
+  toDate: faker.date.anytime(),
+  isVerified: faker.datatype.boolean(),
+  status: sample(['active', 'banned']),
+  role: sample([
+    'Leader',
+    'Hr Manager',
+    'UI Designer',
+    'UX Designer',
+    'UI/UX Designer',
+    'Project Manager',
+    'Backend Developer',
+    'Full Stack Designer',
+    'Front End Developer',
+    'Full Stack Developer',
+  ]),
+  year: sample(['2012', '2013', '2021', '2030']),
+  transmission: sample(['Automatic', 'Manual', 'Semi-Automatic']),
+  service_interval: sample(['every 2 months', 'every 6 months', 'every month']),
+}));
+
+export const customers = [...Array(24)].map((_, index) => ({
+  id: faker.string.uuid(),
+  avatarUrl: `/assets/images/avatars/avatar_${index + 1}.jpg`,
+  name: faker.person.fullName(),
+  company: faker.phone.number(),
+  fuel: faker.vehicle.vin(),
+  date: faker.number.binary(),
+  dattess: faker.date.anytime(),
+  isVerified: faker.datatype.boolean(),
+  status: sample(['active', 'inactive']),
+  role: sample([
+    'Leader',
+    'Hr Manager',
+    'UI Designer',
+    'UX Designer',
+    'UI/UX Designer',
+    'Project Manager',
+    'Backend Developer',
+    'Full Stack Designer',
+    'Front End Developer',
+    'Full Stack Developer',
+  ]),
+  year: sample([
+    'john.doe@example.com',
+    'sarah.smith@example.com',
+    'michael.jones@example.com',
+    'emily.wilson@example.com',
+    'david.brown@example.com',
+    'lisa.johnson@example.com',
+    'robert.anderson@example.com',
+    'jessica.taylor@example.com',
+    'william.moore@example.com',
+    'laura.miller@example.com',
+  ]),
+  transmission: faker.location.city(),
+  service_interval: sample(['every 2 months', 'every 6 months', 'every month']),
+}));

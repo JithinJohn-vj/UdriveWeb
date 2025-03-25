@@ -1,0 +1,13 @@
+  //date disable
+  // const {id}=useParams()
+  // const isWeekend = (date) => {
+  //   if (date.year() === 2024 && date.month() === 2) {
+  //     if (date.date() === 19 || date.date() === 20) {
+  //       return true;
+  //     }
+  //   }
+
+  //   const day = date.day();
+  //   return day === 0 || day === 6;
+  // };
+  // const forbiddenDates = [new Date(2024, 2, 19), new Date(2024, 2, 20)]; // Array of forbidden dates

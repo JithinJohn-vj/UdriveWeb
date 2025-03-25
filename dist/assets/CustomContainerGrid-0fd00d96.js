@@ -1,0 +1,1 @@
+import{j as i,P as r}from"./index-e2557835.js";import{G as n}from"./Grid-f905a886.js";const s=({children:t,alignItems:e})=>i.jsx(n,{container:!0,spacing:2,alignItems:e||"center",children:t});s.propTypes={children:r.node.isRequired,alignItems:r.string};const p=s;export{p as C};
